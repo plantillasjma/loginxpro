@@ -75,28 +75,29 @@ body {
     background-color: #081a4c; /* Efeito de hover ajustado */
 }
 
-/* Estilo da mensagem de erro */
+/* Estilo del mensaje de error */
 .error-message {
     display: none;
     background-color: rgba(255, 0, 0, 0.8);
     color: white;
     padding: 15px;
     border-radius: 5px;
-    position: absolute;
-    top: -60px;
-    left: 50%;
-    transform: translateX(-50%);
+    position: relative; /* Cambiar de absolute a relative */
+    top: 10px; /* Espacio debajo del botón */
+    left: 0;
+    transform: none;
     opacity: 0;
     transition: opacity 0.5s, top 0.5s;
     font-size: 16px;
     width: 100%;
     max-width: 450px;
     text-align: center;
+    margin-top: 10px; /* Añadir margen para separación */
 }
 
+/* Cuando se muestra el error */
 .error-message.show {
     display: block;
-    top: -10px;
     opacity: 1;
 }
 
