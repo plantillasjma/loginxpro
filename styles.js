@@ -5,10 +5,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const loginError = document.getElementById("loginError");
     const loginOverlay = document.getElementById("loginOverlay");
 
-    // Ajustar la posición del mensaje de error (si es necesario)
-    loginError.style.position = "relative";
-    loginError.style.marginTop = "10px";  // Espacio debajo del botón
-    loginError.style.display = "none";    // Oculto por defecto
+    // Asegurar que el mensaje de error esté oculto al inicio
+    loginError.style.display = "none";
 
     // Credenciales permitidas (modifica según sea necesario)
     const validUsername = "admin";
@@ -17,8 +15,13 @@ document.addEventListener("DOMContentLoaded", function () {
     function showError(message) {
         loginError.textContent = message;
         loginError.style.display = "block";  // Mostrar mensaje
+        loginError.style.color = "red";      // Asegurar que sea visible
+        loginError.style.fontWeight = "bold";
+        loginError.style.textAlign = "center";
+        loginError.style.marginTop = "10px"; // Separación del botón
+
         setTimeout(() => {
-            loginError.style.display = "none";
+            loginError.style.display = "none"; // Ocultar después de 3 segundos
         }, 3000);
     }
 
