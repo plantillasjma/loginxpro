@@ -104,7 +104,7 @@ body {
 /* Imagem à direita com o fundo */
 .login-image {
     flex: 1;
-    background: url('ina-fundo.png') no-repeat center center;
+    background: url('https://i.ibb.co/TqmR1W3z/5098610442665831911.jpg') no-repeat center center;
     background-size: cover;
     height: 100%;
     position: relative; /* Necessário para que o ::before funcione corretamente */
